@@ -33,4 +33,4 @@ jobs:
       
       - name: "Create pull request"
         run: |
-          gh pr create -R "gimli01/fork-foo" -B "main" -H "dblup:main" --title "test" --body ""
+          gh pr create -R "gimli01/fork-foo" -B "gimli01:main" -H "dblup:main" --title "test" --body ""
