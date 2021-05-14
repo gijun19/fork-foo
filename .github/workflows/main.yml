@@ -13,11 +13,11 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    REPO: ${{ github.repository }}
   # This workflow contains a single job called "build"
-  build:
+  Create pull request from fork:
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
