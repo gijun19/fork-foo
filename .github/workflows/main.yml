@@ -32,6 +32,8 @@ jobs:
           token: ${{ secrets.PAT }}
       
       - name: "Create pull request"
+        # run: |
+        #   # gh release view 
         run: |
-          gh auth status
-          gh pr create -R "gimli01/fork-foo" -B "main" -H "dblup:main" --title "test" --body ""
+          release_body=`gh release view -R npm/cli`
+          gh pr create -R "gimli01/fork-foo" -B "main" -H "dblup:main" --title "test" --body "$release_body"
