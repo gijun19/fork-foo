@@ -35,5 +35,5 @@ jobs:
         # run: |
         #   # gh release view 
         run: |
-          release_body=`gh release view -R npm/cli`
+          release_body=`gh release view --json body -R npm/cli`
           gh pr create -R "gimli01/fork-foo" -B "main" -H "dblup:main" --title "test" --body "$release_body"
